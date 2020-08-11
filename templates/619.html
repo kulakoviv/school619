@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+
+{% block title %}
+Административная панель
+{% endblock %}
+
+
+{% block body %}
+<div class="container p-2 p-md-3 text-dark rounded bg-light">
+    <div class>
+      <h3 class="display-8 mx-auto text-center">Административная панель</h3>
+    </div>
+</div>
+<div class="container jumbotron p-1 p-md-10 text-black rounded bg-white">
+    <div>
+        <a type="button" class="btn btn-outline-secondary btn-block" href="/create"><h3>Создать предмет</h3></a>
+        <a type="button" class="btn btn-outline-secondary btn-block" href="/pr"><h3>Предметы в работе</h3></a>
+        <a type="button" class="btn btn-outline-secondary btn-block" href="/pr1"><h3>Предметы для выгрузки</h3></a>
+        <a type="button" class="btn btn-outline-secondary btn-block" href="/pro"><h3>Согласованные предметы</h3></a>
+        <a type="button" class="btn btn-outline-secondary btn-block" href="/oop"><h3>Выгрузить в ООП</h3></a>
+        <a type="button" class="btn btn-outline-secondary btn-block" href="/prr"><h3>Резервный архив</h3></a>
+    </div>
+</div>
+{% endblock %}

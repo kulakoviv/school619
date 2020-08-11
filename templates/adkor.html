@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block title %}
+Изменение предмета
+{% endblock %}
+
+
+{% block body %}
+<div class="jumbotron p-4 p-md-10 text-black rounded bg-black">
+    <div class=" px-0">
+        <h2>Изменить предмет</h2>
+        <form method="post">
+            <h5>Предмет:</h5>
+            <input type="Text" name="Name" id="Name" class="form-control" placeholder="Предмет" value="{{ article.Name }}"><br>
+            <h5>Уровень</h5>
+            <input type="Text" name="Ur" id="Ur" class="form-control" placeholder="Уровень" value="{{ article.Ur }}"><br>
+            <h5>Класс:</h5>
+            <input type="Text" name="Kl" id="Kl" class="form-control" placeholder="Класс" value="{{ article.Kl }}"><br>
+            <input type="submit" class="btn btn-success" value="Сохранить">
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+
+{% block title %}
+Контроль
+{% endblock %}
+
+
+{% block body %}
+<div class="jumbotron p-4 p-md-10 text-black rounded bg-black">
+    <div class=" px-0">
+        <h2 class="text-center">Контрольные цифры</h2>
+    </div>
+<div id="res"></div>
+        <form method="post">
+            <h5 class="text-center">1 класс:  {{ article[0] }}</h5>
+            <h5 class="text-center">2 класс:  {{ article[1] }}</h5>
+            <h5 class="text-center">3 класс:  {{ article[2] }}</h5>
+            <h5 class="text-center">4 класс:  {{ article[3] }}</h5>
+            <h5 class="text-center">5 класс:  {{ article[4] }}</h5>
+            <h5 class="text-center">6 класс:  {{ article[5] }}</h5>
+            <h5 class="text-center">7 класс:  {{ article[6] }}</h5>
+            <h5 class="text-center">8 класс:  {{ article[7] }}</h5>
+            <h5 class="text-center">9 класс:  {{ article[8] }}</h5>
+            <h5 class="text-center">10 класс:  {{ article[9] }}</h5>
+            <h5 class="text-center">11 класс:  {{ article[10] }}</h5>
+            <h5 class="text-center">Итого:  {{ article[12] }}</h5>
+            <h5 class="text-center">В базе:  {{ article[11] }}</h5>
+            {%if article[12] == article[11]: %}
+                <a href="/pubpub" class="btn btn-success center mx-auto d-block m-3">ОПУБЛИКОВАТЬ</a>
+            {%endif%}
+        </form>
+</div>
+{% endblock %}

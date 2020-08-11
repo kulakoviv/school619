@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+{% block title %}
+Создание предмета
+{% endblock %}
+
+
+{% block body %}
+<div class="jumbotron p-4 p-md-10 text-black rounded bg-black">
+    <div class=" px-0">
+        <h3 class="text-center p-4">Добавить предмет</h3>
+        <form method="post">
+            <h5>Предмет:</h5>
+            <input type="Text" name="Name" id="Name" class="form-control" placeholder="Предмет"><br>
+            <h5>Уровень (Если базовый: поле оставляем пустым):</h5>
+            <input type="Text" name="Ur" id="Ur" class="form-control" placeholder="Уровень"><br>
+            <h5>Класс начала изучения предмета:</h5>
+            <input type="Text" name="Kl1" id="Kl1" class="form-control" placeholder="Класс начало"><br>
+            <h5>Класс окончания изучения предмета:</h5>
+            <input type="Text" name="Kl2" id="Kl2" class="form-control" placeholder="Класс окончание"><br>
+            <input type="submit" class="btn btn-success" value="Отправить">
+        </form>
+    </div>
+</div>
+{% endblock %}

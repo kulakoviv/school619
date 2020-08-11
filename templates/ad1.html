@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+
+{% block title %}
+{{ article.Name }} {{ article.Kl }} {{ article.Ur }}
+{% endblock %}
+
+
+{% block body %}
+<div class="jumbotron p-4 p-md-10 text-black rounded bg-black">
+    <div class=" px-0">
+        <h2>{{ article.Name }} {{ article.Kl }} класс {{ article.Ur }}</h2>
+    </div>
+<div id="res"></div>
+        <form method="post">
+            <h5>Личностные результаты:</h5>
+            <h6>{{ article.Li }}</h6>
+            <h5>Метапредметные результаты:</h5>
+            <h6>{{ article.Mp }}</h6>
+            <h5>Ученик научится:</h5>
+            <h6>{{ article.Prn }}</h6>
+            <h5>Ученик получит возможность научится:</h5>
+            <h6>{{ article.Prp }}</h6>
+            <a href="/addel1/{{ article.id }}" class="m-2 btn btn-danger">Вернуть в работу учителю</a>
+            <a href="/adkor1/{{ article.id }}" class="m-2 btn btn-warning">Изменить название предмета</a>
+            <a href="/pubo/{{ article.id }}" class="m-2 btn btn-success">Согласовать и выгрузить</a>
+        </form>
+</div>
+{% endblock %}

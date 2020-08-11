@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+
+{% block title %}
+{{ article.Name }} {{ article.Kl }} {{ article.Ur }}
+{% endblock %}
+
+
+{% block body %}
+<div class="jumbotron p-4 p-md-10 text-black rounded bg-black">
+    <div class=" px-0">
+        <h2>{{ article.Name }} {{ article.Kl }} класс {{ article.Ur }}</h2>
+    </div>
+<div id="res"></div>
+        <form method="post">
+            <h5>Личностные результаты:</h5>
+            <textarea  name="Li" id="Li" class="form-control" placeholder="Личностные" rows="10">{{ article.Li }}</textarea><br>
+            <h5>Метапредметные результаты:</h5>
+            <textarea  name="Mp" id="Mp" class="form-control" placeholder="Метапредметные" rows="10">{{ article.Mp }}</textarea><br>
+            <h5>Ученик научится:</h5>
+            <textarea  name="Prn" id="Prn" class="form-control"  placeholder="Ученик научится" rows="10">{{ article.Prn }}</textarea><br>
+            <h5>Ученик получит возможность научится:</h5>
+            <textarea  name="Prp" id="Prp" class="form-control" placeholder="Ученик получит возможность научится" rows="10">{{ article.Prp }}</textarea><br>
+            <input type="submit" class="btn btn-success"  value="Сохранить">
+            {%if article.Li != '' and article.Mp != '' and article.Prn != '' and article.Prp != '' %}
+                <a href="/pub/{{ article.id }}" class="m-2 btn btn-warning">Отправить для публикации</a>
+            {% endif %}
+        </form>
+</div>
+{% endblock %}

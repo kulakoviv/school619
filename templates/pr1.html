@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block title %}
+Предметы
+{% endblock %}
+
+
+{% block body %}
+<div class="jumbotron p-4 p-md-10 text-black rounded bg-black">
+    <div class=" px-0">
+        <h2 class="text-center p-3">Предметы</h2>
+        {% for el in articles %}
+        <div class="alert alert-info">
+            <h5>{{ el.Name }} {{ el.Ur }} {{ el.Kl }} класс
+            <a href="/pr1/{{ el.id }}" class="btn btn-warning float-right">Взять в работу</a>
+            </h5>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

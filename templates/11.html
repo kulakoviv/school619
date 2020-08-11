@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+
+{% block title %}
+11 класс
+{% endblock %}
+
+
+{% block body %}
+<div class="jumbotron p-4 p-md-10 text-black rounded bg-black">
+    <div class="text-center px-0">
+        <h2>Выберите предмет и уровень освоения</h2>
+        {% for el in articles %}
+        <div class="m-4 alert alert-info">
+            <h4>{{ el.Name }} {{ el.Ur }} {{ el.Kl }} класс</h4>
+            <a href="/kl/{{ el.id }}" class="m-2 btn btn-warning">Взять в работу</a>
+        </div>
+        {% endfor %}
+        <div class="text-center px-0">
+        {% for el1 in articles1 %}
+        <div class="m-4 alert alert-warning">
+            <h4>На согласовании: {{ el1.Name }} {{ el1.Ur }} {{ el1.Kl }} класс</h4>
+        </div>
+        {% endfor %}
+        <div class="text-center px-0">
+        {% for el2 in articles2 %}
+        <div class="m-4 alert alert-success">
+            <h4>Согласовано: {{ el2.Name }} {{ el2.Ur }} {{ el2.Kl }} класс</h4>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
